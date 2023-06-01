@@ -79,7 +79,7 @@ li {
     z-index: 0;
 }
 
-textarea {
+/* textarea {
     font-family: 'Univers-Next', 'HYQiHei_75S', sans-serif;
     height: 7em;
     width: 100%;
@@ -110,6 +110,50 @@ textarea:focus {
         black -10px -20px;
     transition: box-shadow 0.5s;
     z-index: 0;
+} */
+
+.comment {
+    font-family: 'Univers-Next', 'HYQiHei_75S', sans-serif;
+    height: 7em;
+    width: 100%;
+    border: none;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    transition: box-shadow 0.5s;
+    background-color:rgb(242, 242, 242);
+    box-shadow: black 0px 0px 0px .8em inset;
+    resize: none;
+    position: relative;
+}
+
+.comment-focus {
+    outline: none;
+    box-shadow: 
+        black 0px 0px 0px 3px inset,
+        rgb(242, 242, 242) 10px -10px 0px -3px,
+        black 10px -10px,
+        rgb(242, 242, 242) -10px -20px 0px -3px,
+        black -10px -20px;
+    transition: box-shadow 0.5s;
+}
+
+.comment-block {
+    color: rgb(242, 242, 242);
+    font-size: 4.5em;
+    text-align: left;
+    line-height: 1.3em;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-shadow: black 0px 0px 0px .8em inset;
+    transition: box-shadow 0.5s;
+    z-index: 1;
+}
+
+.comment-block-focus {
+    box-shadow: black 0px 0px 0px 3px inset;
 }
 
 *::selection {

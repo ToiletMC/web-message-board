@@ -53,6 +53,7 @@
                     <li>公园垃圾太多，请加强清洁力度</li>
                 </ul>
                 <div class="comment">
+                    <div class="comment-block">留言键入>></div>
                     <input type="text" class="topic">
                     <textarea placeholder="留言键入<<"></textarea>
                 </div>
@@ -61,5 +62,37 @@
         </div>
     </div>
 </body>
+
+<script>
+    let comment = document.querySelector(".comment");
+    let block = document.querySelector(".comment-block");
+    let body = document.querySelector("body");
+
+    block.addEventListener("transitionend",()=>{
+        if(block.classList.contains("comment-block-focus")){
+            block.style.display = "none";
+        };
+    });
+
+    comment.addEventListener("click", (e) =>{
+        e.stopPropagation();
+        comment.classList.add("comment-focus");
+        block.innerHTML= ""
+        block.classList.add("comment-block-focus");
+        document.querySelector(".topic").focus();
+    },true);
+
+    body.addEventListener("click", (e) =>{
+        if(comment.classList.contains("comment-focus")){
+            e.stopPropagation()
+            comment.classList.remove("comment-focus");
+            block.innerHTML= "留言键入<<";
+            block.style.display = "block";
+            setTimeout(() => {
+                block.classList.remove("comment-block-focus");
+            }, 0);
+        }
+    });
+</script>
 
 </html>
