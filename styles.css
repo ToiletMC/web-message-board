@@ -114,7 +114,8 @@ textarea:focus {
 
 .comment {
     font-family: 'Univers-Next', 'HYQiHei_75S', sans-serif;
-    height: 7em;
+    margin-top: 3em;
+    height: 5.8em;
     width: 100%;
     border: none;
     padding: 8px 12px;
@@ -139,9 +140,11 @@ textarea:focus {
 
 .comment-block {
     color: rgb(242, 242, 242);
-    font-size: 4.5em;
+    padding-left: 10px;
+    font-size: 4em;
     text-align: left;
-    line-height: 1.3em;
+    line-height: 1.4em;
+    box-sizing: border-box;
     left: 0;
     top: 0;
     position: absolute;
