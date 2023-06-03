@@ -79,7 +79,7 @@
         comment.classList.add("comment-focus");
         block.innerHTML= ""
         block.classList.add("comment-block-focus");
-        document.querySelector(".topic").focus();
+        // document.querySelector(".topic").focus();
     },true);
 
     body.addEventListener("click", (e) =>{
@@ -93,6 +93,9 @@
             }, 0);
         }
     });
+
+    // 为了方案调试，请把下面取消注释。
+    // comment.click();
 </script>
 
 </html>

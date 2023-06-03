@@ -74,11 +74,6 @@ li {
     padding-left: 40px;
 }
 
-.topic {
-    position: absolute;
-    z-index: 0;
-}
-
 /* textarea {
     font-family: 'Univers-Next', 'HYQiHei_75S', sans-serif;
     height: 7em;
@@ -111,6 +106,12 @@ textarea:focus {
     transition: box-shadow 0.5s;
     z-index: 0;
 } */
+
+input,textarea{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .comment {
     font-family: 'Univers-Next', 'HYQiHei_75S', sans-serif;
